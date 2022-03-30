@@ -1,8 +1,8 @@
 let SHEET;
 function unZipIt() 
 {
-  SHEET = SpreadsheetApp.openById("1iZ85hnkPKaZyLoTq8P6ZfxDiICRyBir5xBAhj9kh1SM").insertSheet();
-  let theFolder = DriveApp.getFolderById('1Jl5fVc3hOsUsKXqVGN4agrYGnsAop4JF');
+  SHEET = SpreadsheetApp.openById(<Spreadsheet ID>).insertSheet();
+  let theFolder = DriveApp.getFolderById(<Folder ID>);
   let theFile = latestFile(theFolder);
   let fileBlob = theFile.getBlob();
   fileBlob.setContentType("application/zip");
