@@ -1,8 +1,8 @@
 let SHEET;
 function unZipIt() 
 {
-  SHEET = SpreadsheetApp.openById(<Spreadsheet ID>).insertSheet();
-  SHEET.deleteRows(51, 950);
+  SHEET = SpreadsheetApp.openById(<Spreadsheet ID>).getSheets()[0];
+  SHEET.clearContents();
   let theFolder = DriveApp.getFolderById(<Folder ID>);
   let theFile = latestFile(theFolder);
   let fileBlob = theFile.getBlob();
